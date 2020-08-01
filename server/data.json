@@ -1,0 +1,60 @@
+[
+    {
+        "cosmos": ["red", "white", "yellow", "pink", "orange", "black"],
+        "hyacinths": ["red", "white", "yellow", "pink", "orange", "blue", "purple"],
+        "lilies": ["red", "white", "yellow", "orange", "black"],
+        "mums": ["red", "white", "yellow", "pink", "purple", "green"],
+        "pansies": ["red", "white", "yellow", "orange", "blue", "purple"],
+        "roses": ["red", "white", "yellow", "pink", "orange", "blue", "purple", "black", "gold"],
+        "tulips": ["red", "white", "yellow", "pink", "orange", "purple", "black"],
+        "windflowers": ["red", "white", "orange", "pink", "blue", "purple"]
+    },
+    {
+        "id": 1,
+        "type": "pansies",
+        "color": "red",
+        "quantity": 12
+    },
+    {
+        "id": 2,
+        "type": "pansies",
+        "color": "white",
+        "quantity": 10
+    },
+    {
+        "id": 3,
+        "type": "pansies",
+        "color": "yellow",
+        "quantity": 9
+    },
+    {
+        "id": 4,
+        "type": "roses",
+        "color": "red",
+        "quantity": 4
+    },
+    {
+        "id": 5,
+        "type": "roses",
+        "color": "yellow",
+        "quantity": 6
+    },
+    {
+        "id": 6,
+        "type": "windflowers",
+        "color": "red",
+        "quantity": 2
+    },
+    {
+        "id": 7,
+        "type": "windflowers",
+        "color": "orange",
+        "quantity": 1
+    },
+    {
+        "id": 8,
+        "type": "hyacinth",
+        "color": "red",
+        "quantity": 2
+    }
+]
