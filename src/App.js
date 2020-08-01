@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   render(){
-    const combo = this.state.flowers[0]
+    const combos = this.state.flowers[0]
     return (
       <div className="App">
         <header className="header">       
@@ -38,8 +38,8 @@ class App extends Component {
           </div>
           <div className="flowerCombos listBoxShared">
             <h2 className="title">Colors available by flower type:</h2>
-            {console.log(`combo`, combo )}
-            <Combos flowers={combo}/>
+            {console.log(`combo`, combos )}
+            <Combos {...combos}/>
           </div>
           <form className="formShared addFlower"></form>
           <form className="formShared choseCombo"></form>

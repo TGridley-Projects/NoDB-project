@@ -1,7 +1,7 @@
 [
     {
         "cosmos": ["red", "white", "yellow", "pink", "orange", "black"],
-        "hyacinths": ["red", "white", "yellow", "pink", "orange", "blue", "purple"],
+        "hyacinth": ["red", "white", "yellow", "pink", "orange", "blue", "purple"],
         "lilies": ["red", "white", "yellow", "orange", "black"],
         "mums": ["red", "white", "yellow", "pink", "purple", "green"],
         "pansies": ["red", "white", "yellow", "orange", "blue", "purple"],
