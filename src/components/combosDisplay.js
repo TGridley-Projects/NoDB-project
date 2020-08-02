@@ -4,14 +4,14 @@ const CombosDisplay = (props) =>{
            
     return(
         <section>
-            <div>Cosmos: {String(props.cosmos)}</div>
-            <div>Hyacinth: {String(props.hyacinth)}</div>
-            <div>Lilies: {String(props.lilies)}</div>
-            <div>Mums: {String(props.mums)}</div>
-            <div>Pansies: {String(props.pansies)}</div>
-            <div>Roses: {String(props.roses)}</div>
-            <div>Tulips: {String(props.tulips)}</div>
-            <div>Windfowers: {String(props.windflowers)}</div>
+            <h2 className="flowerTypes">Cosmos: <span className="listFont">{String(props.cosmos)}</span></h2>
+            <h2 className="flowerTypes">Hyacinth: <span className="listFont">{String(props.hyacinth)}</span></h2>
+            <h2 className="flowerTypes">Lilies: <span className="listFont">{String(props.lilies)}</span></h2>
+            <h2 className="flowerTypes">Mums: <span className="listFont">{String(props.mums)}</span></h2>
+            <h2 className="flowerTypes">Pansies: <span className="listFont">{String(props.pansies)}</span></h2>
+            <h2 className="flowerTypes">Roses: <span className="listFont">{String(props.roses)}</span></h2>
+            <h2 className="flowerTypes">Tulips: <span className="listFont">{String(props.tulips)}</span></h2>
+            <h2 className="flowerTypes">Windfowers: <span className="listFont">{String(props.windflowers)}</span></h2>
         </section>
         )
 }

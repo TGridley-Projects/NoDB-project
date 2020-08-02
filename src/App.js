@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './reset.css'
 import './App.css';
 import Combos from './components/combos'
+import Flowers from './components/flowers'
 import axios from 'axios';
 
 class App extends Component {
@@ -13,9 +14,10 @@ class App extends Component {
   } 
 
   componentDidMount(){
-    this.getFlowers();
+   return this.getFlowers()
   }
 
+  
   getFlowers = () => {
     axios.get('/api/flowers')
     .then( res => {
@@ -25,9 +27,12 @@ class App extends Component {
     })
     .catch(err => {console.log(err)})
   }
-
+ 
+  
   render(){
+    const lngth = this.state.flowers.length
     const combos = this.state.flowers[0]
+    const owned = this.state.flowers.slice(1, lngth)
     return (
       <div className="App">
         <header className="header">       
@@ -35,11 +40,11 @@ class App extends Component {
         <section className="mainDisplay">
           <div className="flowersOwned listBoxShared">
             <h2 className="title">Flowers on my island:</h2>
+              <Flowers {...owned} num1={lngth-1}/>
           </div>
           <div className="flowerCombos listBoxShared">
             <h2 className="title">Colors available by flower type:</h2>
-            {console.log(`combo`, combos )}
-            <Combos {...combos}/>
+              <Combos {...combos}/>
           </div>
           <form className="formShared addFlower"></form>
           <form className="formShared choseCombo"></form>
