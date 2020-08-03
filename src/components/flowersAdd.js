@@ -30,27 +30,28 @@ class FlowerAdd extends Component {
   render() {
     return (
       <section className="newFlower">
+        <label>New:</label>
         <input
-          className="form-elem"
+          className="form-elem typeColor"
           value={this.state.type}
           type="text"
-          placeholder="Add the type of flower"
+          placeholder="What type?"
           onChange={(e) => this.typeHandler(e)}
         />
 
         <input
-          className="form-elem"
+          className="form-elem typeColor"
           value={this.state.color}
           type="text"
-          placeholder="Add the color"
+          placeholder="What color?"
           onChange={(e) => this.colorHandler(e)}
         />
 
         <input
-          className="form-elem"
+          className="form-elem quantity"
           value={this.state.quantity}
           type="text"
-          placeholder="Add the quantity"
+          placeholder="Qty."
           onChange={(e) => this.quantityHandler(e)}
         />
 

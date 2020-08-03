@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FlowersDisplay from "./flowersDisplay";
 import FlowersAdd from "./flowersAdd";
-import FlowerDelete from "./flowersDelete"
+import FlowerUpdate from "./flowersUpdate"
 
 class Flowers extends Component {
   constructor(props) {
@@ -16,9 +16,9 @@ class Flowers extends Component {
     const owned = this.props;
     return (
       <div>
-        <FlowersDisplay {...owned} deleteFlower={this.props.deleteFlower}/>
         <FlowersAdd addFlower={this.props.addFlower} />
-        <FlowerDelete {...owned} deleteFlower={this.props.deleteFlower} />
+        <FlowersDisplay {...owned} deleteFlower={this.props.deleteFlower}/>
+        <FlowerUpdate flowers={this.props.flowers} updateFlower={this.props.updateFlower}/>
       </div>
     );
   }

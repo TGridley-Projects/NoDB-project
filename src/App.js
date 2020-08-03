@@ -14,6 +14,7 @@ class App extends Component {
 
     this.addFlower = this.addFlower.bind(this);
     this.deleteFlower = this.deleteFlower.bind(this);
+    this.updateFlower = this.updateFlower.bind(this);
   }
 
   componentDidMount() {
@@ -47,7 +48,7 @@ class App extends Component {
 
   deleteFlower = (id) => {
     axios
-      .delete(`api/flower/${id}`)
+      .delete(`/api/flower/${id}`)
       .then((res) => {
         this.setState({
           flowers: res.data,
@@ -55,6 +56,20 @@ class App extends Component {
       })
       .catch((err) => console.log(err));
   };
+
+  updateFlower = (id, newType, newColor, newQuantity ) => {
+    const body = {newType, newColor, newQuantity}
+    axios
+      .put(`/api/flower/${id}`,body)
+      .then((res) => {
+        this.setState({
+          flowers: res.data,
+        });
+      })
+      .catch((err) => console.log(err));
+  };
+
+  updateFlower;
 
   render() {
     const lngth = this.state.flowers.length;
@@ -71,6 +86,9 @@ class App extends Component {
               num1={lngth - 1}
               addFlower={this.addFlower}
               deleteFlower={this.deleteFlower}
+              updateFlower={this.updateFlower}
+              flowers={this.state.flowers}
+              
             />
           </div>
           <div className="flowerCombos listBoxShared">
