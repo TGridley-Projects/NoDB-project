@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import FlowersDisplay from './flowersDisplay'
+import FlowersAdd from './flowersAdd'
+
 let temp = []
 
 class Flowers extends Component {
@@ -56,14 +58,18 @@ class Flowers extends Component {
 
     
     render(){
-            const {num1} = this.props       
-            console.log (num1)
-            console.log (`state`, this.state.type)
-            return(<FlowersDisplay 
-                type={this.state.type}
-                color={this.state.color}
-                quantity={this.state.quantity}
-            />)
+        const owned = this.props
+            return(
+                <div>
+                    <FlowersDisplay 
+                        {...owned}
+                    />
+                    <FlowersAdd
+                        addFlower={this.state.addFlower}
+                        />    
+                        {console.log(this.state.addFlower)}
+                </div>
+            )
         }
       
 }

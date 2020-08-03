@@ -10,7 +10,9 @@ class App extends Component {
     super()
     this.state = {
       flowers: []
-    }  
+    } 
+    
+    this.addFlower = this.addFlower.bind(this);
   } 
 
   componentDidMount(){
@@ -27,6 +29,16 @@ class App extends Component {
     })
     .catch(err => {console.log(err)})
   }
+
+  addFlower =(e, myNewFlower) => {
+    e.preventDefault()
+    axios.post('/api/flowers', {myNewFlower})
+      .then( res => {
+        this.setState({
+          flowers: res.data
+        })
+      })
+  }
  
   
   render(){
@@ -40,7 +52,7 @@ class App extends Component {
         <section className="mainDisplay">
           <div className="flowersOwned listBoxShared">
             <h2 className="title">Flowers on my island:</h2>
-              <Flowers {...owned} num1={lngth-1}/>
+              <Flowers {...owned} num1={lngth-1} addFlower={this.addFlower} />
           </div>
           <div className="flowerCombos listBoxShared">
             <h2 className="title">Colors available by flower type:</h2>
