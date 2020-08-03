@@ -77,7 +77,9 @@ class App extends Component {
     const owned = this.state.flowers.slice(1, lngth);
     return (
       <div className="App">
-        <header className="header"></header>
+        <header className="header">
+          <h1 class="tagLine">Helping you track those flowers and hybrids!</h1>
+        </header>
         <section className="mainDisplay">
           <div className="flowersOwned listBoxShared">
             <h2 className="title">Flowers on my island:</h2>

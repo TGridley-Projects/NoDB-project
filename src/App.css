@@ -31,6 +31,16 @@
 
 }
 
+.flowerTypes{
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.listFont {
+  font-size: 18px;
+}
+
 .title {
   font-size: 24px;
   font-weight: bold;
@@ -61,4 +71,14 @@
   height: 10%;
   width: 100%;
   background-color: green;
-}
+  background-image: url("./images/Leif-logo.png");
+  background-repeat: no-repeat;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .tagLine {
+    font-size:30px;
+    color: gold;
+  }
