@@ -1,67 +1,75 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
-class FlowerAdd extends Component{
-    constructor(){
-        super();
+class FlowerAdd extends Component {
+  constructor() {
+    super();
 
-        this.state = {
-            myNewFlower: ""
-        }
-    }
+    this.state = {
+      type: "",
+      color: "",
+      quantity: "",
+    };
+  }
 
-    universalHandler = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        })
-    }
+  typeHandler = (e) => {
+    this.setState({
+      type: e.target.value,
+    });
+  };
+  colorHandler = (e) => {
+    this.setState({
+      color: e.target.value,
+    });
+  };
+  quantityHandler = (e) => {
+    this.setState({
+      quantity: e.target.value,
+    });
+  };
 
-    render(){
-        return(null
-        //     <section className="newFlower">
-        //         <form onSubmit={e => {
-        //         this.props.addFlower(e, this.state.myNewFlower)
-        //         // this.setState({myNewFlower: {type: "", color: "", quantity: ""
-        //         console.log(this.state.myNewFlower)
-        //         }
-        //     }>
-        //             <label>
-        //                 New Flower (type, color, quantity)
-        //                 <input
-        //                     className="form-elem"
-        //                     name="myNewFlower.type" 
-        //                     value={this.state.name} 
-        //                     type="text" 
-        //                     placeholder="Add the type of flower"
-        //                     onChange={(e) => this.universalHandler(e)}
-        //                 />
-        //             </label>
-                    /* <label>
-                        Color:
-                        <input
-                            className="form-elem"
-                            name="myNewFlower.color" 
-                            value={this.state.name} 
-                            type="text" 
-                            placeholder="Add the color of flower"
-                            onChange={(e) => this.universalHandler(e)}
-                        />
-                    </label>
-                    <label>
-                        Quantity:
-                        <input
-                            className="form-elem"
-                            name="myNewFlower.quantity" 
-                            value={this.state.name} 
-                            type="text" 
-                            placeholder="Add the quantity"
-                            onChange={(e) => this.universalHandler(e)}
-                        />
-                    </label> */
-                    
-            //     </form>
-            // </section>
-        )
-    }
+  render() {
+    return (
+      <section className="newFlower">
+        <input
+          className="form-elem"
+          value={this.state.type}
+          type="text"
+          placeholder="Add the type of flower"
+          onChange={(e) => this.typeHandler(e)}
+        />
+
+        <input
+          className="form-elem"
+          value={this.state.color}
+          type="text"
+          placeholder="Add the color"
+          onChange={(e) => this.colorHandler(e)}
+        />
+
+        <input
+          className="form-elem"
+          value={this.state.quantity}
+          type="text"
+          placeholder="Add the quantity"
+          onChange={(e) => this.quantityHandler(e)}
+        />
+
+        <button
+          onClick={(e) => {
+            this.props.addFlower(
+              e,
+              this.state.type,
+              this.state.color,
+              this.state.quantity
+            );
+            this.setState({ type: "", color: "", quantity: "" });
+          }}
+        >
+          submit
+        </button>
+      </section>
+    );
+  }
 }
 
-export default FlowerAdd
+export default FlowerAdd;

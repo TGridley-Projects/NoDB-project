@@ -18,7 +18,8 @@ class Combos extends Component {
                 pansies={pansies}
                 roses={roses}
                 tulips={tulips}
-                windflowers={windflowers}/>            
+                windflowers={windflowers}
+            />            
         )
     };
 };
